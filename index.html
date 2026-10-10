@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samurai Trading | Exclusive Trading Signals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #050505;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, .brand-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(5, 5, 5, 0.85), rgba(5, 5, 5, 0.95)), url('logo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .glow-red {
+            box-shadow: 0 0 25px rgba(239, 68, 68, 0.4);
+        }
+        .glow-gold {
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col justify-between">
+
+    <!-- HEADER -->
+    <header class="border-b border-red-900/40 bg-black/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="logo.png" alt="Samurai Trading Logo" class="w-10 h-10 object-cover rounded-full border border-red-500 shadow-md">
+                <span class="text-xl font-black tracking-wider text-red-500 brand-font">SAMURAI TRADING</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://t.me/ashenwithcrypto_22" target="_blank" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm font-bold flex items-center space-x-2 transition">
+                    <i class="fab fa-telegram"></i> <span>Telegram</span>
+                </a>
+                <a href="https://wa.me/94768242312" target="_blank" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg text-sm font-bold flex items-center space-x-2 transition">
+                    <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-bg py-20 px-4 text-center relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-red-500/40 bg-red-950/30 text-red-400 text-xs font-bold tracking-widest uppercase">
+                Growth • Stability • Success
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black tracking-wider mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-500 to-red-600">
+                EXCLUSIVE TRADING SIGNALS
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                Master the markets with high-accuracy professional signals, detailed entry, TP & SL guides, and dedicated support.
+            </p>
+        </div>
+    </section>
+
+    <!-- PACKAGES SECTION -->
+    <section class="py-16 px-4 max-w-7xl mx-auto w-full">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-white tracking-wide">SELECT YOUR VIP PACKAGE</h2>
+            <p class="text-gray-400 text-sm mt-2">Choose your plan, select items, and place your order directly via WhatsApp or Telegram.</p>
+        </div>
+
+        <div id="packages-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Packages dynamically injected via JS -->
+        </div>
+
+        <!-- ORDER SUMMARY & CHECKOUT BAR -->
+        <div class="mt-12 bg-neutral-900 border border-neutral-800 p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+            <div>
+                <h3 class="text-lg font-bold text-red-400 brand-font">Selected Packages Total:</h3>
+                <p id="total-price-display" class="text-3xl font-black text-white">$0.00 <span class="text-xs text-neutral-400 font-normal">USD</span></p>
+            </div>
+            <div class="flex flex-wrap items-center gap-4">
+                <button onclick="checkoutWhatsApp()" class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-xl flex items-center space-x-2 transition shadow-lg">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Buy via WhatsApp</span>
+                </button>
+                <button onclick="checkoutTelegram()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl flex items-center space-x-2 transition shadow-lg">
+                    <i class="fab fa-telegram text-xl"></i>
+                    <span>Buy via Telegram</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES BAR -->
+    <section class="border-t border-neutral-900 bg-black/60 py-10 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+            <div class="p-4"><i class="fas fa-bullseye text-red-500 text-2xl mb-2"></i><h4 class="text-xs font-bold text-gray-300">HIGH ACCURACY SIGNALS</h4></div>
+            <div class="p-4"><i class="fas fa-chart-line text-blue-500 text-2xl mb-2"></i><h4 class="text-xs font-bold text-gray-300">DETAILED ENTRY, TP & SL</h4></div>
+            <div class="p-4"><i class="fas fa-graduation-cap text-purple-500 text-2xl mb-2"></i><h4 class="text-xs font-bold text-gray-300">PRO TRADING EDUCATION</h4></div>
+            <div class="p-4"><i class="fas fa-shield-alt text-green-500 text-2xl mb-2"></i><h4 class="text-xs font-bold text-gray-300">SUPPORT & COMMUNITY</h4></div>
+            <div class="p-4 col-span-2 md:col-span-1"><i class="fas fa-users text-yellow-500 text-2xl mb-2"></i><h4 class="text-xs font-bold text-gray-300">ACTIVE VIP MEMBERS</h4></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-neutral-900 py-6 text-center text-xs text-neutral-500">
+        <p>&copy; 2026 SAMURAI TRADING. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const PACKAGES_DATA = [
+            {
+                id: "free",
+                name: "FREE PLAN",
+                price: 0,
+                badge: "Free Access",
+                tagline: "3 - 5 SIGNALS GUIDE",
+                duration: "Learn & Grow",
+                features: ["3 - 5 Signals Guide", "Learn & Grow Community", "Basic Market Insights"]
+            },
+            {
+                id: "1week",
+                name: "1 WEEK VIP",
+                price: 8,
+                badge: "7 Days Access",
+                tagline: "GET REAL SIGNALS",
+                duration: "7 Days Access",
+                features: ["Real-time VIP Signals", "Detailed Entry, TP & SL", "7 Days VIP Access", "Basic Support"]
+            },
+            {
+                id: "1month",
+                name: "1 MONTH VIP",
+                price: 15,
+                badge: "30 Days Access",
+                tagline: "FULL VIP BENEFITS",
+                duration: "30 Days Access",
+                features: ["Full VIP Signals Access", "Detailed Entry, TP & SL Guide", "Pro Trading Guide & Education", "Support & Community"]
+            },
+            {
+                id: "lifetime",
+                name: "LIFE TIME VIP",
+                price: 30,
+                badge: "One Payment",
+                tagline: "LIFETIME ACCESS",
+                duration: "Lifetime Access",
+                popular: true,
+                features: ["Lifetime Unlimited Signals", "High Accuracy Signals", "Pro Trading Education", "24/7 VIP Support & Community"]
+            }
+        ];
+
+        let selectedPackages = {};
+
+        function renderPackages() {
+            const grid = document.getElementById('packages-grid');
+            grid.innerHTML = '';
+
+            PACKAGES_DATA.forEach(pkg => {
+                const isSelected = selectedPackages[pkg.id] || false;
+                grid.innerHTML += `
+                    <div class="relative bg-neutral-900/90 border ${isSelected ? 'border-red-500 glow-red' : 'border-neutral-800'} rounded-2xl p-6 flex flex-col justify-between transition-all">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xs px-2.5 py-1 rounded-full ${pkg.price === 0 ? 'bg-green-950 text-green-400 border border-green-800' : 'bg-red-950 text-red-400 border border-red-800'} font-bold">${pkg.badge}</span>
+                                <input type="checkbox" ${isSelected ? 'checked' : ''} onchange="togglePackage('${pkg.id}')" class="w-5 h-5 accent-red-600 cursor-pointer">
+                            </div>
+                            <h3 class="text-xl font-black text-white mb-1 brand-font">${pkg.name}</h3>
+                            <p class="text-red-400 font-bold text-sm mb-4">${pkg.tagline}</p>
+                            <div class="text-3xl font-black text-white mb-6">${pkg.price === 0 ? 'FREE' : '$' + pkg.price}</div>
+                            <ul class="space-y-2 mb-6 text-sm text-gray-300">
+                                ${pkg.features.map(f => `<li class="flex items-center space-x-2"><i class="fas fa-check text-red-500 text-xs"></i><span>${f}</span></li>`).join('')}
+                            </ul>
+                        </div>
+                        <button onclick="togglePackage('${pkg.id}')" class="w-full py-2.5 rounded-xl font-bold text-sm ${isSelected ? 'bg-red-600 text-white' : 'bg-neutral-800 text-gray-300 hover:bg-neutral-700'} transition">
+                            ${isSelected ? 'Selected' : 'Select Package'}
+                        </button>
+                    </div>
+                `;
+            });
+            updateTotal();
+        }
+
+        function togglePackage(id) {
+            selectedPackages[id] = !selectedPackages[id];
+            renderPackages();
+        }
+
+        function updateTotal() {
+            let total = 0;
+            let count = 0;
+            for (let id in selectedPackages) {
+                if (selectedPackages[id]) {
+                    const pkg = PACKAGES_DATA.find(p => p.id === id);
+                    if (pkg) {
+                        total += pkg.price;
+                        count++;
+                    }
+                }
+            }
+            document.getElementById('total-price-display.').innerHTML = `$${total}.00 <span class="text-xs text-neutral-400 font-normal">USD (${count} selected)</span>`;
+        }
+
+        function getOrderSummaryText() {
+            let text = "Hello Samurai Trading! I would like to buy the following package(s):%0A";
+            let total = 0;
+            let hasSelection = false;
+
+            PACKAGES_DATA.forEach(pkg => {
+                if (selectedPackages[pkg.id]) {
+                    hasSelection = true;
+                    text += `- ${pkg.name} ($${pkg.price})%0A`;
+                    total += pkg.price;
+                }
+            });
+
+            if (!hasSelection) {
+                return null;
+            }
+
+            text += `%0ATotal Amount: $${total}.00`;
+            return text;
+        }
+
+        function checkoutWhatsApp() {
+            const summary = getOrderSummaryText();
+            if (!summary) {
+                alert("Please select at least one package first!");
+                return;
+            }
+            const url = `https://wa.me/94768242312?text=${summary}`;
+            window.open(url, '_blank');
+        }
+
+        function checkoutTelegram() {
+            const summary = getOrderSummaryText();
+            if (!summary) {
+                alert("Please select at least one package first!");
+                return;
+            }
+            const url = `https://t.me/ashenwithcrypto_22?text=${encodeURIComponent("Hello! I want to order packages.")}`;
+            window.open(url, '_blank');
+        }
+
+        // Initial render
+        renderPackages();
+    </script>
+</body>
+</html>
